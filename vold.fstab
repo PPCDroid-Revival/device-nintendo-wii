@@ -1,0 +1,1 @@
+dev_mount sdcard /mnt/sdcard auto /devices/virtual/block/loop0

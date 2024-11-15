@@ -1,0 +1,8 @@
+on fs
+    mount vfat loop@/sdcard.img /mnt/sdcard uid=1000,gid=1015,fmask=0702,dmask=0702
+    insmod /system/lib/modules/mousedev.ko
+
+service hciattach /system/xbin/hciemu -n -s /btsnoop 00:11:22:33:44:55
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
